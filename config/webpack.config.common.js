@@ -35,6 +35,7 @@ module.exports = {
   devtool: 'source-map',
 
   entry: {
+    lodash: path.resolve(__dirname, '../src/lodash.js'),
     app: path.resolve(__dirname, '../src/app.js')
   },
 
@@ -128,5 +129,9 @@ module.exports = {
     ]),
 
     new VueLoaderPlugin(),
-  ]
+  ],
+
+  // externals: {
+  //   lodash: 'window._'
+  // }
 }
